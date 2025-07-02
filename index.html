@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuizPro: A beautiful, professional web app with a programming quiz, image carousel, weather, and jokes. Responsive, accessible, and modern.">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f9e0.png">
+  <title>QuizPro - Professional Quiz, Weather & Fun App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="app-header" role="banner">
+    <div class="logo" aria-label="QuizPro Home"><i class="fa-solid fa-brain"></i> QuizPro</div>
+    <nav class="nav" role="navigation" aria-label="Main Navigation">
+      <a href="#carousel-section" aria-label="Go to Gallery section"><i class="fa-solid fa-images"></i> Gallery</a>
+      <a href="#quiz-section" aria-label="Go to Quiz section"><i class="fa-solid fa-question"></i> Quiz</a>
+      <a href="#weather-section" aria-label="Go to Weather section"><i class="fa-solid fa-cloud-sun"></i> Weather</a>
+      <a href="#api-section" aria-label="Go to Fun section"><i class="fa-solid fa-face-laugh"></i> Fun</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      <button id="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    </nav>
+  </header>
+  <main class="container" role="main">
+    <section id="carousel-section" aria-labelledby="carousel-title">
+      <h1 id="carousel-title"><i class="fa-solid fa-images"></i> Image Carousel</h1>
+      <div class="carousel-container">
+        <button id="carousel-prev" aria-label="Previous image"><i class="fa-solid fa-arrow-left"></i></button>
+        <img id="carousel-image" src="" alt="Carousel Image" />
+        <button id="carousel-next" aria-label="Next image"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div id="carousel-indicators" aria-label="Carousel indicators"></div>
+    </section>
+    <section id="quiz-section" aria-labelledby="quiz-title">
+      <h1 id="quiz-title"><i class="fa-solid fa-question"></i> Programming Languages Quiz</h1>
+      <div id="timer"></div>
+      <div id="quiz-container"></div>
+      <div id="feedback"></div>
+      <button id="prev-btn" aria-label="Previous question">Previous</button>
+      <button id="next-btn" aria-label="Next question or Submit">Next</button>
+      <div id="result"></div>
+      <div id="review"></div>
+      <button id="retake-btn" style="display:none;"><i class="fa-solid fa-rotate-left"></i> Retake Quiz</button>
+    </section>
+    <section id="weather-section" aria-labelledby="weather-title">
+      <h2 id="weather-title"><i class="fa-solid fa-cloud-sun"></i> Weather</h2>
+      <form id="weather-form" aria-label="Weather search form">
+        <input type="text" id="city-input" placeholder="Enter city name" required aria-label="City name" />
+        <button type="submit" aria-label="Search weather"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        <button type="button" id="geo-btn" aria-label="Use my location for weather"><i class="fa-solid fa-location-crosshairs"></i> Use My Location</button>
+      </form>
+      <div id="weather-result" class="weather-card" aria-live="polite">
+        <!-- Weather info will appear here -->
+      </div>
+    </section>
+    <section id="api-section" aria-labelledby="joke-title">
+      <h2 id="joke-title"><i class="fa-solid fa-face-laugh"></i> Random Joke</h2>
+      <div id="joke" aria-live="polite">Loading...</div>
+      <button id="new-joke-btn" aria-label="Get a new joke">Get New Joke</button>
+    </section>
+  </main>
+  <footer class="app-footer" role="contentinfo">
+    &copy; 2024 QuizPro. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 
